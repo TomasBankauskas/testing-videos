@@ -39,7 +39,6 @@ layout: page
 ---
 
 <iframe src="https://player.vimeo.com/video/332340877" width="640" height="548" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-<p><a href="https://vimeo.com/332340877">Stackbit Demo</a> from <a href="https://vimeo.com/user97760367">Stackbit</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 **This is a paragraph**. Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line [indentation](https://en.wikipedia.org/wiki/Indentation_(typesetting)), but <abbr title="HyperText Markup Language">HTML</abbr> paragraphs can be any structural grouping of related content, such as images or form fields.
 
