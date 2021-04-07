@@ -6,40 +6,6 @@ import _ from 'lodash';
 import { withPrefix, classNames } from '../utils';
 
 export default class Body extends React.Component {
-    constructor(props) {
-        super(props);
-        this.makeVideosResponsive = this.makeVideosResponsive.bind(this);
-        this.destroyResponsiveVideos = this.destroyResponsiveVideos.bind(this);
-    }
-
-    componentDidMount() {
-
-        this.makeVideosResponsive();// on initial page load
-
-        Router.events.on('routeChangeComplete', this.makeVideosResponsive);
-        Router.events.on('routeChangeStart', this.destroyResponsiveVideos);
-    }
-
-    componentWillUnmount() {
-        Router.events.off('routeChangeComplete', this.makeVideosResponsive);
-        Router.events.off('routeChangeStart', this.destroyResponsiveVideos);
-    }
-
-    makeVideosResponsive() {
-        const videoEmbeds = ['iframe[src*="youtube.com"]', 'iframe[src*="vimeo.com"]'];
-        reframe(videoEmbeds.join(','));
-    }
-
-    destroyResponsiveVideos() {
-        const frameWrappers = document.querySelectorAll('.js-reframe');
-        frameWrappers.forEach(function(frameWrapper) {
-            const frame = frameWrapper.firstChild;
-            frame.removeAttribute('style');
-            frameWrapper.parentNode.insertBefore(frame, frameWrapper);
-            frameWrapper.parentNode.removeChild(frameWrapper);
-        });
-    }
-
     render() {
         const page = _.get(this.props, 'page');
         const pageTitle = _.get(page, 'title');

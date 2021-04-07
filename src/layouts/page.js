@@ -7,6 +7,16 @@ import Footer from '../components/Footer';
 import { htmlToReact, markdownify } from '../utils';
 
 export default class Page extends React.Component {
+    componentDidMount() {
+        console.log('Page componentDidMount');
+    }
+    componentDidUpdate() {
+        console.log('Page componentDidUpdate');
+    }
+    componentWillUnmount() {
+        console.log('Page componentWillUnmount');
+    }
+
     render() {
         const data = _.get(this.props, 'data');
         const config = _.get(data, 'config');
